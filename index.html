@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover stunning custom nail designs and artistic creations by Declan.">
+  <meta property="og:title" content="Declan Nail Art - Best in Custom Nail Designs">
+  <meta property="og:description" content="Experience professional nail art tailored to your unique style.">
+  <meta property="og:image" content="https://source.unsplash.com/random/1200x630?nailart">
+  <meta property="og:url" content="https://declan-nail-art.example.com">
+  <title>Declan Nail Art | Professional Custom Nail Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    :root {
+      --primary-color: #8e44ad;
+      --secondary-color: #5e3370;
+      --accent-color: #f39c12;
+      --background-color: #f5f5f5;
+      --text-color: #2c2c2c;
+      --footer-bg: linear-gradient(to right, #2c2c2c, #5e3370);
+      --transition-speed: 0.4s;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition-speed);
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 15px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(142, 68, 173, 0.8), rgba(94, 51, 112, 0.8)),
+        url('https://source.unsplash.com/random/1920x1080?nailart') no-repeat center/cover;
+      text-align: center;
+      color: white;
+      padding: 10rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: var(--accent-color);
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color var(--transition-speed);
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      cursor: pointer;
+    }
+
+    .portfolio img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonials {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .testimonial-item {
+      font-size: 1.2rem;
+      background-color: #ffffff;
+      padding: 20px;
+      border: 2px solid var(--primary-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .testimonial-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact input,
+    .contact textarea,
+    .contact button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color var(--transition-speed);
+    }
+
+    .contact button {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-weight: bold;
+      transition: background-color var(--transition-speed);
+    }
+
+    .contact button:hover {
+      background-color: var(--accent-color);
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      transition: color var(--transition-speed);
+    }
+
+    footer a:hover {
+      color: var(--accent-color);
+    }
+
+    .social-icons a {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      color: white;
+      transition: color var(--transition-speed);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<header>
+  <div class="navbar">
+    <div class="navbar-logo">Declan Nail Art</div>
+    <nav class="navbar-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Professional Nail Art Creations</h1>
+  <p>Experience exquisite nail designs tailored for you.</p>
+  <a href="#portfolio" class="btn">Explore Portfolio</a>
+</section>
+
+<section id="portfolio">
+  <h2 class="section-title aos-init aos-animate" data-aos="fade-up">Our Portfolio</h2>
+  <div class="portfolio aos-init aos-animate" data-aos="fade-up">
+    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Nail Art Design Floral" class="lightbox">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Nail Art Design Geometric" class="lightbox">
+    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Nail Art Design Abstract" class="lightbox">
+    <img src="https://images.unsplash.com/photo-1607779097040-a7842a15a805?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Nail Art Design Minimalist" class="lightbox">
+    <img src="https://images.unsplash.com/photo-1594824476962-a6395fa11d17?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Colorful Nail Art Design" class="lightbox">
+    <img src="https://images.unsplash.com/photo-1522143049018-dff52a65b89f?crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;h=400" alt="Creative Nail Art Design" class="lightbox">
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2 class="section-title aos-init" data-aos="fade-up">What Our Clients Say</h2>
+  <div class="testimonials aos-init slick-initialized slick-slider slick-dotted" data-aos="fade-up">
+    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5600px; transform: translate3d(-1600px, 0px, 0px);"><div class="testimonial-item slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1" style="width: 756px;">"The best nail artist I’ve ever met. Love the attention to detail."</div><div class="testimonial-item slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 756px;">"Absolutely stunning nail designs!"</div><div class="testimonial-item slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 756px;">"Declan’s work is beyond amazing. Highly recommend!"</div><div class="testimonial-item slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02" style="width: 756px;">"The best nail artist I’ve ever met. Love the attention to detail."</div><div class="testimonial-item slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true" tabindex="-1" style="width: 756px;">"Absolutely stunning nail designs!"</div><div class="testimonial-item slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true" tabindex="-1" style="width: 756px;">"Declan’s work is beyond amazing. Highly recommend!"</div><div class="testimonial-item slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true" tabindex="-1" style="width: 756px;">"The best nail artist I’ve ever met. Love the attention to detail."</div></div></div>
+    
+    
+  <ul class="slick-dots" role="tablist" style=""><li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="-1">1</button></li><li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3" tabindex="0" aria-selected="true">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3" tabindex="-1">3</button></li></ul></div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title aos-init" data-aos="fade-up">Get In Touch</h2>
+  <form action="#" method="POST" data-aos="fade-up" class="aos-init">
+    <input type="text" name="name" placeholder="Your Name" required="" aria-label="Your Name">
+    <textarea name="message" placeholder="Your Message" required="" aria-label="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="booking">
+  <h2 class="section-title aos-init" data-aos="fade-up">Book an Appointment</h2>
+  <div id="booking-calendar" data-aos="fade-up" class="aos-init"><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Sun Dec 29 2024</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Mon Dec 30 2024</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Tue Dec 31 2024</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Wed Jan 01 2025</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Thu Jan 02 2025</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Fri Jan 03 2025</div><div style="cursor: pointer; padding: 10px; border: 1px solid rgb(221, 221, 221); margin: 5px;">Sat Jan 04 2025</div></div>
+  <button id="confirm-booking" class="btn">Confirm Booking</button>
+</section>
+
+<footer>
+  <p>© Declan Nail Art. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Testimonials Slider
+  $(document).ready(function () {
+    $('.testimonials').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      arrows: false,
+    });
+  });
+
+  // Booking Calendar
+  const bookingCalendar = document.getElementById("booking-calendar");
+  let selectedDate = null;
+
+  const today = new Date();
+  for (let i = 0; i < 7; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    const dateElement = document.createElement("div");
+    dateElement.textContent = date.toDateString();
+    dateElement.style.cursor = "pointer";
+    dateElement.style.padding = "10px";
+    dateElement.style.border = "1px solid #ddd";
+    dateElement.style.margin = "5px";
+    dateElement.addEventListener("click", () => {
+      selectedDate = date.toDateString();
+      alert(`You selected ${selectedDate}`);
+    });
+    bookingCalendar.appendChild(dateElement);
+  }
+
+  document.getElementById("confirm-booking").addEventListener("click", () => {
+    if (selectedDate) {
+      alert(`Booking confirmed for ${selectedDate}`);
+    } else {
+      alert("Please select a date first.");
+    }
+  });
+</script>
+
+</body></html>
